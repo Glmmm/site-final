@@ -1,0 +1,59 @@
+<section class="content">
+    <h3>DESTAQUE <i class="fa fa-star"></i></h3>
+
+    <a [routerLink]="[ '/news']">
+
+        <div class="highlight">
+            <div class="highlight-info">
+                <h3>SIRIUS-7B DESTRUIDO</h3>
+                <p>Uma grande onda de energia foi detectada pela IMC e investigações indicam envolvimento da Milicia, há
+                    indícios de que testes de bélicos eram feitos</p>
+            </div>
+            <div>
+                <img src="/news/Typhon_Explosion.webp" alt="">
+            </div>
+        </div>
+    </a>
+
+    <div class="news">
+        <h3>NOVAS NOTICIAS <i class=" fa fa-newspaper-o"></i></h3>
+
+        <div class="news-1">
+            <div class="news-1-content">
+                <h3>SUCESSO EM NOVA OPERAÇÃO DA FRONTEIRA</h3>
+                <p>Operação visava eliminar instalações ilegais de fabricação de armamento</p>
+            </div>
+        </div>
+
+
+        <div class="news-2">
+            <div class="news-2-content">
+                <h3>NOVAS INSTALAÇÕES CONCLUÍDAS</h3>
+                <p>IMC finaliza novos alojamentos para pilotos e soldados na Colônia</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-wrapper">
+        <div class="form-info">
+            <h4>FIQUE POR DENTRO DE TODOS ACONTECIMENTOS DA FRONTEIRA</h4>
+        </div>
+        <div class="form-main">
+            <form [formGroup]="formulario" class="form">
+                <label for="nome">Nome</label>
+                <input [formControl]="formulario.controls.nome" type="text" placeholder="Ex: Guilherme Papa">
+                <label for="email">Email</label>
+                <input [formControl]="formulario.controls.email" type="text" placeholder="Ex: 2411600121@fema.edu.br">
+                <div *ngIf="enviado && formulario.valid">
+                    <p>Obrigado {{formulario.controls['nome'].value}} </p>
+                </div>
+            </form>
+            <div class="btn-wrapper">
+                <div class="container-btn">
+                    <button class="form-btn" type="submit" (click)="valores()">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

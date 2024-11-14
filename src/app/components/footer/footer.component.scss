@@ -1,0 +1,30 @@
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  padding: 128px 12.5% 64px 12.5%;
+  color: #f4f4f4;
+}
+div {
+  width: 100%;
+  text-align: center;
+}
+.juridico {
+  border-right: 1px solid #f4f4f4;
+}
+.logo {
+  border-right: 1px solid #f4f4f4;
+}
+a {
+  color: #f4f4f4;
+  text-decoration: none;
+  padding: 0 8px 0 8px;
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo {
+  text-align: center;
+}
